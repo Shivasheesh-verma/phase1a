@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#1a1a1a">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icon-192.png">
+    <link rel="stylesheet" href="/main.css">
+    <title>Phase 1A</title>
+  </head>
+  <body data-view="today">
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="kicker">Phase 1A</p>
+          <h1 id="todayLabel">Today</h1>
+        </div>
+        <a class="nav-link" href="/history" aria-label="History">History</a>
+      </header>
+
+      <section class="log-panel" aria-label="Log food">
+        <form id="logForm" class="log-form">
+          <input id="logInput" name="raw_text" type="text" autocomplete="off" placeholder="1 apple, 2 eggs" required>
+          <button type="submit">Log</button>
+        </form>
+        <p id="statusLine" class="status-line" role="status"></p>
+      </section>
+
+      <section class="totals-panel" aria-label="Running totals">
+        <div class="section-heading">
+          <h2>Running totals</h2>
+          <span id="entryCount">0 entries</span>
+        </div>
+        <div id="totalsGrid" class="totals-grid"></div>
+      </section>
+
+      <section class="entries-panel" aria-label="Today's entries">
+        <div class="section-heading">
+          <h2>Entries</h2>
+        </div>
+        <div id="entryList" class="entry-list"></div>
+      </section>
+
+      <section class="close-panel" aria-label="Close day">
+        <button id="closeDayButton" class="wide-button" type="button">Close Day</button>
+        <article id="summaryCard" class="summary-card hidden"></article>
+      </section>
+    </main>
+
+    <script src="/main.js" defer></script>
+  </body>
+</html>
